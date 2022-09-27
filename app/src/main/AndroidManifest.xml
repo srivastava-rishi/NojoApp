@@ -14,31 +14,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nojoto">
         <activity
-            android:name="com.rsstudio.nojoto.ui.base.BaseActivity"
-            android:resizeableActivity="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Simple_Theme_2"
+            android:name=".ui.upload.UploadActivity"
             android:exported="false" />
         <activity
-            android:name="com.rsstudio.nojoto.ui.splash.SplashActivity"
+            android:name=".ui.base.BaseActivity"
+            android:exported="false"
             android:resizeableActivity="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Simple_Theme_2"
-            android:exported="true" >
-
+            android:theme="@style/Simple_Theme_2" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Simple_Theme_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name="com.rsstudio.nojoto.ui.main.MainActivity"
+            android:name=".ui.main.MainActivity"
+            android:exported="false"
             android:resizeableActivity="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Simple_Theme_2"
-            android:exported="false"/>
+            android:theme="@style/Simple_Theme_2" />
     </application>
 
 </manifest>

@@ -10,12 +10,14 @@
         android:background="@color/white">
 
         <TextView
+            android:id="@+id/tvTitle"
+            fontPath="fonts/Chomsky 400.otf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SplashActivity"
-            android:textSize="@dimen/_15ssp"
             android:layout_centerInParent="true"
-            />
+            android:text="Nojoto"
+            android:textSize="@dimen/_25ssp"
+            tools:ignore="MissingPrefix" />
 
 
     </RelativeLayout>

@@ -1,31 +1,36 @@
-package com.rsstudio.nojoto.ui.main
+package com.rsstudio.nojoto.ui.upload
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.rsstudio.nojoto.R
-import com.rsstudio.nojoto.databinding.ActivityMainBinding
+import com.rsstudio.nojoto.databinding.ActivityUploadBinding
 import com.rsstudio.nojoto.ui.base.BaseActivity
-import com.rsstudio.nojoto.ui.upload.UploadActivity
 
-class MainActivity : BaseActivity(), View.OnClickListener {
+class UploadActivity : BaseActivity(), View.OnClickListener {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityUploadBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_upload)
 
         //
         initTheme()
         initActions()
+        initView()
     }
 
     private fun initActions(){
-        binding.iBottomNav.rlPhoto.setOnClickListener(this)
+        binding.iAppBar.ivHamburger.setOnClickListener(this)
     }
+
+    private fun initView() {
+        binding.iAppBar.ivHamburger.setImageResource(R.drawable.left)
+        binding.iAppBar.tvTitle.text = "Upload Photo Screen"
+    }
+
 
     private fun initTheme() {
         window.statusBarColor = resources.getColor(R.color.light_bluer)
@@ -35,12 +40,9 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
 
         when (view?.id) {
-          R.id.rlPhoto ->{
-              val intent = Intent(this, UploadActivity::class.java)
-              startActivity(intent)
-          }
+            R.id.ivHamburger -> {
+              finish()
+            }
         }
     }
-
-
 }

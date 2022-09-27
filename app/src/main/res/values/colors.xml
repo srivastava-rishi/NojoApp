@@ -93,6 +93,8 @@
     <color name="grey9">#C1C0BC</color>
 
     //
-    <color name="light_blue">#31C2D5</color>
+    <color name="light_bluer">#31C2D5</color>
+    <color name="light_grey">#F5F4F4</color>
+    <color name="Goo_Grey_Dark">#202124</color>
 
 </resources>
