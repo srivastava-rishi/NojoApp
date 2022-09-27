@@ -1,8 +1,9 @@
-package com.rsstudio.nojoto
+package com.rsstudio.nojoto.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.rsstudio.nojoto.R
 import com.rsstudio.nojoto.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
