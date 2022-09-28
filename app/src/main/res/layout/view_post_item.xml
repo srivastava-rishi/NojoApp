@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/rlRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -13,12 +15,14 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/white"
         app:cardCornerRadius="@dimen/_6sdp">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/white">
 
             <RelativeLayout
                 android:id="@+id/rlUserInfo"
@@ -42,10 +46,10 @@
                     android:id="@+id/llUpper"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/civImage"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_toRightOf="@+id/civImage"
                     android:orientation="vertical">
 
 
@@ -95,8 +99,8 @@
                 layout="@layout/view_post_action"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_2sdp"
                 android:layout_below="@+id/ivPostImage"
+                android:layout_marginTop="@dimen/_2sdp"
                 android:visibility="visible" />
 
 

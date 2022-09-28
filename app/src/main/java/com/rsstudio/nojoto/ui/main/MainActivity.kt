@@ -8,9 +8,11 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.rsstudio.nojoto.R
 import com.rsstudio.nojoto.databinding.ActivityMainBinding
 import com.rsstudio.nojoto.ui.base.BaseActivity
+import com.rsstudio.nojoto.ui.main.adapter.MainAdapter
 import com.rsstudio.nojoto.ui.upload.UploadActivity
 import com.rsstudio.nojoto.util.Constant
 import java.io.File
@@ -21,6 +23,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     private lateinit var imageUri : Uri
 
     private var logTag: String = "@MainActivity"
+
+    private lateinit var mainAdapter: MainAdapter
 
     private val contract = registerForActivityResult(ActivityResultContracts.TakePicture()){ successful ->
         Log.d(logTag, ": $imageUri")
@@ -40,6 +44,15 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         initTheme()
         initActions()
         imageUri = createImageUri()!!
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        val llm = LinearLayoutManager(this)
+        binding.rvPost.setHasFixedSize(true)
+        binding.rvPost.layoutManager = llm
+        mainAdapter = MainAdapter(this)
+        binding.rvPost.adapter = mainAdapter
     }
 
     private fun initActions() {
@@ -51,20 +64,19 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         window.navigationBarColor = resources.getColor(R.color.Goo_Grey_Dark)
     }
 
-    override fun onClick(view: View?) {
-
-        when (view?.id) {
-            R.id.rlPhoto -> {
-               contract.launch(imageUri)
-            }
-        }
-    }
-
     private fun createImageUri() :Uri? {
       val image = File(applicationContext.filesDir,"camera_photo.png")
       return FileProvider.getUriForFile(applicationContext,
           "com.rsstudio.nojoto.fileProvider",
           image
           )
+    }
+    override fun onClick(view: View?) {
+
+        when (view?.id) {
+            R.id.rlPhoto -> {
+                contract.launch(imageUri)
+            }
+        }
     }
 }

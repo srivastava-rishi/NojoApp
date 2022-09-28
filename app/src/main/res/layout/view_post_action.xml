@@ -26,8 +26,8 @@
 
                 <ImageView
                     android:id="@+id/ivLike"
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="@dimen/_15sdp"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/like"
                     app:tint="@color/l_red" />
@@ -43,7 +43,7 @@
                     android:singleLine="true"
                     android:text="Love"
                     android:textColor="@color/d_d1_dark"
-                    android:textSize="@dimen/_9ssp"
+                    android:textSize="@dimen/_8ssp"
                     tools:ignore="MissingPrefix" />
 
             </LinearLayout>
@@ -64,8 +64,8 @@
 
                 <ImageView
                     android:id="@+id/ivComment"
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="@dimen/_15sdp"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/comment_white_oval_bubble"
                     app:tint="@color/black" />
@@ -81,7 +81,7 @@
                     android:singleLine="true"
                     android:text="Comment"
                     android:textColor="@color/d_d1_dark"
-                    android:textSize="@dimen/_9ssp"
+                    android:textSize="@dimen/_8ssp"
                     tools:ignore="MissingPrefix" />
 
             </LinearLayout>
@@ -103,8 +103,8 @@
 
                 <ImageView
                     android:id="@+id/ivShare"
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="@dimen/_15sdp"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/share"
                     app:tint="@color/black" />
@@ -120,7 +120,7 @@
                     android:singleLine="true"
                     android:text="Share"
                     android:textColor="@color/d_d1_dark"
-                    android:textSize="@dimen/_9ssp"
+                    android:textSize="@dimen/_8ssp"
                     tools:ignore="MissingPrefix" />
 
             </LinearLayout>
