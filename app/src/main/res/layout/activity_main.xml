@@ -18,6 +18,7 @@
             android:id="@+id/rvPost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/iBottomNav"
             android:layout_below="@+id/iAppBar"
             android:layout_marginTop="@dimen/_4sdp"
             android:overScrollMode="never"
