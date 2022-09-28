@@ -41,6 +41,18 @@
             android:resizeableActivity="false"
             android:screenOrientation="portrait"
             android:theme="@style/Simple_Theme_2" />
+        
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.rsstudio.nojoto.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
+
     </application>
 
 </manifest>

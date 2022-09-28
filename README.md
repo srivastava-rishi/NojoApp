@@ -1,1 +1,1 @@
-# NewsBreeze
+# NojoApp

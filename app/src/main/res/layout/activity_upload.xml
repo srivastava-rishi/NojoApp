@@ -57,13 +57,13 @@
             android:layout_below="@+id/cvPostImage"
             android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/_2sdp"
-            android:text="Select Photo"
+            android:text="Selected Photo"
             android:textColor="@color/black"
             android:textSize="@dimen/_10ssp"
             tools:ignore="MissingPrefix" />
 
         <RelativeLayout
-            android:id="@+id/llPost"
+            android:id="@+id/llUploadButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvTitle"
